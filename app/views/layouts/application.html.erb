@@ -15,14 +15,20 @@
         <%= link_to "NYCDA Overflow", root_path %>
       </div>
   		<div id="nav_button">
-        <%= link_to "New Post", new_post_path %>
+        <% if user_signed_in? %>
+          <%= link_to "New Post", new_post_path %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path %>
+          <%= link_to "Sign In", new_user_session_path %>
+        <% end %>
       </div>
   	</nav>
+
   </div>
 
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <div id="body_wrapper">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
 

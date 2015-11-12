@@ -20,22 +20,22 @@ $white: #FFFFFF;
 $border: #E9E9E9;
 
 
- body{
- 	font-family: 'Oswald', sans-serif;
- 	background: #E9E9E9;
- 	p{
- 		font-family: Arial, sans-serif;
- 	}
- }
+body{
+	font-family: 'Oswald', sans-serif;
+	background: #E9E9E9;
+	p{
+		font-family: Arial, sans-serif;
+	}
+}
 
- .clearfix:before, .clearfix:after{
- 	content: " ";
- 	display: table;
- }
+.clearfix:before, .clearfix:after{
+	content: " ";
+	display: table;
+}
 
- .clearfix:after{
- 	clear: both;
- }
+.clearfix:after{
+	clear: both;
+}
 #nav_wrapper{
 	max-width: 1140 px;
  	width: 100%;
@@ -79,7 +79,7 @@ $border: #E9E9E9;
  	margin: 0 auto;	
 }
 
-//##########POSTS
+//####################### POSTS
 #post_title{
 	padding: 0 5%;
 }
