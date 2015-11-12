@@ -3,5 +3,6 @@
 <% @posts.each do |f| %>
 	<h2><%= link_to f.title, f %></h2>
 	<p>Published <%= time_ago_in_words(f.created_at) %></p>
+	<p>Written by <%= f.user.email %> </p>
 <% end %>
 <%= link_to "New Post", new_post_path %>
