@@ -1,1 +1,7 @@
-<h1>THIS IS THE INDEX PLACEHOLDER</h1>
+<h1>THIS IS THE INDEX</h1>
+
+<% @posts.each do |f| %>
+	<h2><%= link_to f.title, f %></h2>
+	<p>Published <%= time_ago_in_words(f.created_at) %></p>
+<% end %>
+<%= link_to "New Post", new_post_path %>
