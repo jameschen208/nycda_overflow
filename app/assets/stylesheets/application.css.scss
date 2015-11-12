@@ -18,6 +18,8 @@ $link: #397CAC;
 $gray: #B2BAC2;
 $white: #FFFFFF;
 $border: #E9E9E9;
+$hover: orange;
+$darkblue: #397CAC;
 
 
 body{
@@ -139,4 +141,56 @@ p{
 	    text-decoration: none;
 	}
 	margin-bottom: 25px;
+	#comments{
+		.comment{
+			border-bottom: 1px solid $border;
+			padding-bottom: 1em;
+			width: 90%;
+			margin: 0 auto;
+			margin-top: 1em;
+			a{
+				padding: .1em .5em;
+				font-size: 15px;
+				background-color: white;
+				color: $darkblue;
+				border: 2px solid $darkblue;			
+			}
+			.comment_content{
+				margin: 0;
+				padding-bottom: 1em;
+			}
+			.comment_author{
+				color: $darkblue;
+				margin-top: .5rem;
+				font-size: .6em;
+				font-weight: 700;
+			}
+		}
+	}
 }
+
+//####################### FORMS
+
+input[type="text"]{
+	width: 20%;
+	border: 1px solid $gray;
+	border-radius: .25em;
+	margin: 1em;
+}
+
+textarea{
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid $gray;
+	border-radius: .25em;
+	margin: 1em 0;
+}
+
+input[type="submit"]{
+	background-color: gray;
+    padding: .25em 1em;
+    border-radius: .25em;
+    color: white;
+    text-decoration: none;
+}
+
