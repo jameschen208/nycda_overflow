@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'normalize';
+$link: #397CAC;
+$gray: #B2BAC2;
+$white: #FFFFFF;
+$border: #E9E9E9;
+
+
+ body{
+ 	font-family: 'Oswald', sans-serif;
+ 	background: #E9E9E9;
+ }
+
+ .clearfix:before, .clearfix:after{
+ 	content: " ";
+ 	display: table;
+ }
+
+ .clearfix:after{
+ 	clear: both;
+ }
+#nav_wrapper{
+	max-width: 1140 px;
+ 	width: 100%;
+ 	background: white;
+	nav{
+ 	width: 80%;
+ 	margin: 0 auto;
+ 	padding: 20px 0;
+ 	#nav_logo{
+ 		float: left;
+ 		font-size: 35px;
+ 	}
+ 	#nav_button{
+ 		float: right;
+ 		a{
+ 			line-height: 55px;
+			background-color: gray;
+		    padding: .25em 1em;
+		    border-radius: .25em;
+		    color: white;
+		    text-decoration: none;
+ 		}
+ 		:hover{
+				color: $link;
+		}
+ 	}
+ }
+
+}
+ 
+#body_wrapper{
+	max-width: 1140 px;
+ 	width: 80%;
+ 	margin: 0 auto;	
+}
+
+//##########POSTS
+#post_title{
+	padding: 0 5%;
+}
+#posts{
+	background: white;
+	padding: 1em 5%;
+	border-radius: .5em;
+	.post{
+		padding: 1em 0;
+		border-bottom: 1px solid $border;
+		.title{
+			a{
+				color: $link;
+				text-decoration: none;
+				font-weight: 100;
+			}
+			:visited{
+
+			}
+			:hover{
+				color: $link;
+			}
+		}
+		.date{
+			margin-top: .25rem;
+			font-size: .9rem;
+			color: $gray;
+		}
+	}
+}
