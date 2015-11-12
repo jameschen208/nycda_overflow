@@ -23,6 +23,9 @@ $border: #E9E9E9;
  body{
  	font-family: 'Oswald', sans-serif;
  	background: #E9E9E9;
+ 	p{
+ 		font-family: Arial, sans-serif;
+ 	}
  }
 
  .clearfix:before, .clearfix:after{
@@ -44,6 +47,13 @@ $border: #E9E9E9;
  	#nav_logo{
  		float: left;
  		font-size: 35px;
+ 		a{
+ 			text-decoration: none;
+ 			color: black;
+ 		}
+		:hover{
+			color: $link;
+		}
  	}
  	#nav_button{
  		float: right;
@@ -81,6 +91,7 @@ $border: #E9E9E9;
 		padding: 1em 0;
 		border-bottom: 1px solid $border;
 		.title{
+			margin-top: 0;
 			a{
 				color: $link;
 				text-decoration: none;
@@ -97,6 +108,26 @@ $border: #E9E9E9;
 			margin-top: .25rem;
 			font-size: .9rem;
 			color: $gray;
+		}
+	}
+}
+
+#post_content{
+	background: white;
+	padding: 1em 5%;
+	border-radius: .5em;
+	h1{
+		font-weight: 100;
+		margin-top: 0;
+	}	
+	.content{
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 2.5%;
+		margin-bottom: 5%;
+		p{
+			color: $gray;
+			line-height: 1.75; 
 		}
 	}
 }
