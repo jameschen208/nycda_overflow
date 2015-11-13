@@ -49,7 +49,7 @@ class CommentsController < ApplicationController
 	private
 
 	def find_post_and_comment
-		@post = Post.find(params[:post_id])
+		@post = Post.friendly.find(params[:post_id])
 		@comment = Comment.find(params[:id])
 	end
 end
