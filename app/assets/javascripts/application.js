@@ -14,19 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-
-$(".votes").click(function(){
-	$.ajax({
-      type: "PUT",
-      url: "/products",
-      data: { product: { name: "Filip", description: "whatever" } },
-      success:(data)(function(){
-      	console.log("hello")
-        return false
-      })
-      error:(data)(function(){
-      	console.log("boo")
-        return false
-      });
-    })
