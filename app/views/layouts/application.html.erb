@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag "logo.png" %>
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  
 </head>
 <body>
   <div id="nav_wrapper">
@@ -18,6 +18,8 @@
   		<div id="nav_button">
         <% if user_signed_in? %>
           <%= link_to "New Post", new_post_path %>
+          <%= link_to "Account", edit_user_registration_path %>
+          <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
         <% else %>
           <%= link_to "Sign Up", new_user_registration_path %>
           <%= link_to "Sign In", new_user_session_path %>

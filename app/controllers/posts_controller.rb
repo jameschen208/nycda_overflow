@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 		@posts = Post.all.order("created_at DESC")
 	end
 
-	def show		
+	def show
+		@user = current_user
 	end
 
 	def new
@@ -48,6 +49,8 @@ class PostsController < ApplicationController
 		@post.downvote_by current_user
 		redirect_to :back
 	end
+
+
 
 	private
 	def post_params

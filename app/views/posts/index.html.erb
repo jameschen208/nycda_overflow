@@ -3,19 +3,20 @@
 	<% @posts.each do |f| %>
 	<div class="post">
 		<h2 class="title"><%= link_to f.title, f %></h2>
+		<p>Votes: <%= f.get_upvotes.size - f.get_downvotes.size %></p>
 		<p class="date">Published <%= time_ago_in_words(f.created_at) %>. Written by <%= f.user.email %></p>
 		<div class="btn-group">
-		<%= link_to like_post_path(f), method: :put, class: "btn btn-default btn-sm" do %>
-			<span class="glyphicon glyphicon-chevron-up"></span>
-			Upvote
-			<%= f.get_upvotes.size %>
-		<% end %>
-		<%= link_to dislike_post_path(f), method: :put, class: "btn btn-default btn-sm" do %>
-			<span class="glyphicon glyphicon-chevron-down"></span>
-			Downvote
-			<%= f.get_downvotes.size %>
-		<% end %>
-	</div>
+			<%= link_to like_post_path(f), method: :put, class: "btn btn-default btn-sm" do %>
+				<span class="glyphicon glyphicon-chevron-up"></span>
+				Upvote
+				<%= f.get_upvotes.size %>
+			<% end %>
+			<%= link_to dislike_post_path(f), method: :put, class: "btn btn-default btn-sm" do %>
+				<span class="glyphicon glyphicon-chevron-down"></span>
+				Downvote
+				<%= f.get_downvotes.size %>
+			<% end %>
+		</div>
 	</div>
 	<% end %>
 </div>

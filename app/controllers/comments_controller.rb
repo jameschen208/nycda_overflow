@@ -34,9 +34,22 @@ class CommentsController < ApplicationController
 		end
 	end
 
+	def upvote
+		find_post_and_comment
+		@comment.upvote_by current_user
+		redirect_to :back
+	end
+
+	def downvote
+		find_post_and_comment
+		@comment.downvote_by current_user
+		redirect_to :back
+	end
+
 	private
 
-	def find_post
+	def find_post_and_comment
 		@post = Post.find(params[:post_id])
+		@comment = Comment.find(params[:id])
 	end
 end
