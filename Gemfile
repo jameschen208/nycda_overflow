@@ -10,6 +10,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form', '~> 3.2'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'pygments.rb', '~> 0.6.3'
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 group :development, :test do
   gem 'byebug'
