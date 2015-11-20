@@ -10,6 +10,8 @@
 		<%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete your post?" } %>
 	<% end %>
 
+	<br><br>
+
 	<div class="btn-group pull-right">
 		<%= link_to like_post_path(@post), method: :put, class: "btn btn-default btn-sm" do %>
 			<span class="glyphicon glyphicon-chevron-up"></span>
