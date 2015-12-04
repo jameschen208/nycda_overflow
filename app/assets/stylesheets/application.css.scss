@@ -14,72 +14,21 @@
  *= require_self
  */
 @import 'normalize';
-$link: #397CAC;
+@import 'materialize';
+
 $gray: #B2BAC2;
 $white: #FFFFFF;
 $border: #E9E9E9;
-$hover: orange;
 $darkblue: #397CAC;
 
 
 body{
-	font-family: 'Oswald', sans-serif;
+	font-family: sans-serif;
 	background: #E9E9E9;
 }
 
 p{
-		font-family: Arial, sans-serif;
-}
-
-.clearfix:before, .clearfix:after{
-	content: " ";
-	display: table;
-}
-
-.clearfix:after{
-	clear: both;
-}
-#nav_wrapper{
-	max-width: 1140 px;
- 	width: 100%;
- 	background: white;
-	nav{
- 	width: 80%;
- 	margin: 0 auto;
- 	padding: 20px 0;
- 	#nav_logo{
- 		float: left;
- 		font-size: 35px;
- 		a{
- 			text-decoration: none;
- 			color: black;
- 		}
-		:hover{
-			color: $link;
-		}
- 	}
- 	#nav_button{
- 		float: right;
- 		a{
- 			line-height: 55px;
-			background-color: gray;
-		    padding: .25em 1em;
-		    border-radius: .25em;
-		    color: white;
-		    text-decoration: none;
- 		}
- 		:hover{
-				color: $link;
-		}
- 	}
- }
-
-}
- 
-#body_wrapper{
-	max-width: 1140 px;
- 	width: 80%;
- 	margin: 0 auto;	
+	font-family: Arial, sans-serif;
 }
 
 //####################### POSTS
@@ -93,20 +42,7 @@ p{
 	.post{
 		padding: 1em 0;
 		border-bottom: 1px solid $border;
-		.title{
-			margin-top: 0;
-			a{
-				color: $link;
-				text-decoration: none;
-				font-weight: 100;
-			}
-			:visited{
 
-			}
-			:hover{
-				color: $link;
-			}
-		}
 		.date{
 			margin-top: .25rem;
 			font-size: .9rem;
@@ -152,7 +88,7 @@ p{
 				padding: .1em .5em;
 				font-size: 15px;
 				background-color: white;
-				color: $darkblue;
+	
 				border: 2px solid $darkblue;			
 			}
 			.comment_content{

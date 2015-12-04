@@ -13,6 +13,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'friendly_id', '~> 5.1'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'byebug'

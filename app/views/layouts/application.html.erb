@@ -6,33 +6,38 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag "logo.png" %>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- mobile -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- fonts -->
+
+  <!-- icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div id="nav_wrapper">
-  	<nav class="clearfix">
-      <div id="nav_logo">
-        <%= link_to "NYCDA Overflow", root_path %>
-      </div>
-  		<div id="nav_button">
-        <% if user_signed_in? %>
-          <%= link_to "New Post", new_post_path %>
-          <%= link_to "Account", edit_user_registration_path %>
-          <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-        <% else %>
-          <%= link_to "Sign Up", new_user_registration_path %>
-          <%= link_to "Sign In", new_user_session_path %>
-        <% end %>
-      </div>
-  	</nav>
-
+ <nav class="orange darken-4">
+  <div class="nav-wrapper container">
+      <%= link_to "NYCDA Overflow", root_path, class:"brand-logo" %>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+          <li><%= link_to "New Post", new_post_path %></li>
+          <li><%= link_to "Account", edit_user_registration_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+    </ul>
   </div>
+</nav>
 
-  <div id="body_wrapper">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </div>
+<div class="container">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</div>
 
 </body>
 </html>
